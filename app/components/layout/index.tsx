@@ -31,9 +31,11 @@ export function Layout({ children }: LayoutProps): JSX.Element {
         className="drawer-toggle"
         ref={toggleRef}
       />
-      <div className="drawer-content flex flex-1 flex-col bg-accent">
+      <div className="drawer-content flex flex-1 flex-col bg-white">
         <Navbar />
-        <main>{children}</main>
+        <main className="flex-1 bg-gradient-to-b from-white to-green100">
+          {children}
+        </main>
         <Footer />
       </div>
       <div className="drawer-side">

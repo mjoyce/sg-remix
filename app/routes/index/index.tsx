@@ -1,4 +1,3 @@
-import * as Icons from '@heroicons/react/24/outline';
 import { Link } from '@remix-run/react';
 import clsx from 'clsx';
 
@@ -18,25 +17,28 @@ export default function Index() {
 
   return (
     <div>
-      <Section className="bg-base-200">
+      <Section>
         <Heading.One>Instant Cloud Status Monitoring</Heading.One>
         <Heading.Two className="mx-auto lg:w-2/5">
           Our instant status pages aggregate the status of all the services you
           depend on.
         </Heading.Two>
-        <Link to="/dashboard" className="btn-primary btn sm:mx-auto">
+        <Link
+          to="/dashboard"
+          className="mx-auto flex min-w-fit items-center justify-center rounded border-none bg-green200 px-3 py-2 text-white"
+        >
           Go to your dashboard
         </Link>
       </Section>
 
-      <Section className="bg-base-200">
+      {/* <Section className="bg-gray100">
         <Heading.One className="mx-auto text-3xl lg:w-1/2">
           Now Monitoring and Normalizing Data from{' '}
           <span className="text-primary">2,620 Services</span>
         </Heading.One>
       </Section>
 
-      <Section className="bg-base-200">
+      <Section className="bg-gray100">
         <Heading.One className="mx-auto text-3xl lg:w-1/2">
           Solutions for Everyone
         </Heading.One>
@@ -46,7 +48,7 @@ export default function Index() {
               <Icons.BuildingLibraryIcon className="h-6 w-6" />
             </Link>
             Education
-            <ol className="list-disc marker:text-primary">
+            <ol className="marker:text-primary list-disc">
               <li>Keep students and staff informed</li>
               <li>Reduce ticket volume</li>
               <li>Essential for remote learning</li>
@@ -57,7 +59,7 @@ export default function Index() {
               <Icons.CloudIcon className="h-6 w-6" />
             </Link>
             DevOps
-            <ol className="list-disc marker:text-primary">
+            <ol className="marker:text-primary list-disc">
               <li>Shorten incident downtime</li>
               <li>Unify maintenance schedules</li>
               <li>Integrates with incident tools</li>
@@ -68,7 +70,7 @@ export default function Index() {
               <Icons.ComputerDesktopIcon className="h-6 w-6" />
             </Link>
             IT HelpDesk
-            <ol className="list-disc marker:text-primary">
+            <ol className="marker:text-primary list-disc">
               <li>Reduce ticket volumes</li>
               <li>Improve transparency</li>
               <li>Shorten resolution times</li>
@@ -84,37 +86,37 @@ export default function Index() {
         </Heading.One>
       </Section>
 
-      <Section className="bg-base-200">
+      <Section className="bg-gray100">
         <Heading.One className="mx-auto text-3xl lg:w-1/2">
           Features for teams of all sizes
         </Heading.One>
       </Section>
 
-      <Section className="bg-base-200">
+      <Section className="bg-gray100">
         <Heading.One className="mx-auto text-3xl lg:w-1/2">
           Additional Features
         </Heading.One>
       </Section>
 
-      <Section className="bg-base-200">
+      <Section className="bg-gray100">
         <Heading.One className="mx-auto text-3xl lg:w-1/2">
           What our customers say
         </Heading.One>
       </Section>
 
-      <Section className="bg-base-200">
+      <Section className="bg-gray100">
         <Heading.One className="mx-auto text-3xl lg:w-1/2">
           Trusted by more than <span className="text-primary">15,000</span>{' '}
           organizations
         </Heading.One>
       </Section>
 
-      <Section className="bg-base-200">
+      <Section className="bg-gray100">
         <Heading.One>Start your free trial now</Heading.One>
         <Heading.Two className="mx-auto lg:w-2/5">
           Every plan pays for itself in time saved:
         </Heading.Two>
-      </Section>
+      </Section> */}
       {/* <Combobox
         items={fetcher.data ? fetcher.data.items : []}
         itemToString={(item) => item?.name ?? ''}

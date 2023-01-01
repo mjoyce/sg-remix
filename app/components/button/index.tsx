@@ -1,16 +1,13 @@
 import clsx from 'clsx';
 
-export type ButtonVariant =
-  | 'neutral'
-  | 'primary'
-  | 'secondary'
-  | 'accent'
-  | 'info'
-  | 'success'
-  | 'warning'
-  | 'error'
-  | 'ghost'
-  | 'link';
+const colorMap = {
+  primary: {
+    bg: 'green200',
+    text: 'white',
+  },
+};
+
+export type ButtonVariant = 'primary';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -22,10 +19,17 @@ export function Button({
   variant,
   ...props
 }: ButtonProps): JSX.Element {
-  const variantClassName = variant ? `btn-${variant}` : undefined;
+  const variantClassName = variant
+    ? `bg-${colorMap[variant].bg} text-${colorMap[variant].text}`
+    : undefined;
+
   return (
     <button
-      className={clsx('btn-active btn', className, variantClassName)}
+      className={clsx(
+        'flex items-center justify-center rounded border-none px-3 py-2',
+        className,
+        variantClassName
+      )}
       {...props}
     >
       {children}
