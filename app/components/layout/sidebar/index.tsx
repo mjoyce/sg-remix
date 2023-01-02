@@ -29,15 +29,13 @@ const links = [
     icon: Icons.UserGroupIcon,
   },
   {
-    text: 'Logout',
-    to: '/logout',
+    text: 'Sign out',
+    to: '/signout',
     icon: Icons.ArrowRightOnRectangleIcon,
   },
 ];
 
-interface SidebarLinkProps extends LinkProps {}
-
-const SidebarLink = ({ children, ...props }: SidebarLinkProps) => (
+const SidebarLink = ({ children, ...props }: LinkProps) => (
   <Link
     {...props}
     className="flex w-full flex-row items-center gap-3 rounded p-2 text-lg text-gray300 hover:bg-gray300/[.1]"

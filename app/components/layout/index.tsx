@@ -21,6 +21,10 @@ export function Layout({ children }: LayoutProps): JSX.Element {
 
   useEffect(() => {
     document.addEventListener('keydown', handleEscape, false);
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+    };
   });
 
   return (
