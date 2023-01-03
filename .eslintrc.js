@@ -1,10 +1,11 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   extends: ['@remix-run/eslint-config', '@remix-run/eslint-config/node'],
-  plugins: ['simple-import-sort', 'unused-imports'],
+  plugins: ['simple-import-sort', 'sort-keys-fix', 'unused-imports'],
   rules: {
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
+    'sort-keys-fix/sort-keys-fix': 'warn',
     'import/first': 'error',
     'import/newline-after-import': 'error',
     'import/no-duplicates': 'error',

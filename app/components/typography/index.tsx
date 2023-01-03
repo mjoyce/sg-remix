@@ -7,7 +7,7 @@ function Heading1({
 }: React.HtmlHTMLAttributes<HTMLHeadElement>): JSX.Element {
   return (
     <h1
-      className={clsx('text-center text-4xl font-bold text-blue', className)}
+      className={clsx('text-center text-4xl font-bold text-gray300', className)}
       {...props}
     >
       {children}
